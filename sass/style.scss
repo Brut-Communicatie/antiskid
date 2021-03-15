@@ -52,6 +52,278 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 // Import variables and mixins.
 @import "abstracts/abstracts";
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+$skid-color-1: #0870B8;
+$skid-color-2: #FF8A15;
+$skid-color-3: #4BAADD;
+$skid-color-4: #F7F8F8;
+$skid-color-5: #808080;
+$skid-color-6: #6B7E88;
+$containerWidth: 1440px;
+
+@mixin Container {
+	width: $containerWidth;
+	margin: 0 auto;
+
+	@media screen and (max-width: $containerWidth) {
+		width: calc(100% - 3rem);
+	}
+}
+
+@mixin Font {
+	font-family: 'PT Sans', sans-serif;
+}
+
+
+.header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	@include Font;
+
+	&__container {
+		@include Container;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__top {
+		height: 40px;
+		background-color: #fff;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
+
+		&--logo {
+			width: 145px;
+			height: 250px;
+			background-color: #fff;
+			box-shadow: 0px 5px 10px #00000029;
+		}
+	}
+
+	&__main {
+		background-color: $skid-color-1;
+		height: 90px;
+		width: 100%;
+		display: flex;
+
+		&--nav {
+			width: 40%;
+			height: 100%;
+			display: flex;
+			margin-right: 20px;
+			justify-content: flex-end;
+			align-items: center;
+
+			a,
+			a:visited,
+			a:active {
+				margin-left: 30px;
+				color: #fff;
+				text-decoration: none;
+				font-size: 18px;
+
+				&:hover {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.banner {
+
+
+	padding: 0 0 12rem;
+	position: relative;
+
+	&__background {
+		height: 650px;
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+		background-color: darkslategray;
+		z-index: -1;
+	}
+
+	&__container {
+		@include Container;
+		display: flex;
+		align-items: stretch;
+		height: 450px;
+	}
+
+	&__image {
+		width: 40%;
+		height: 600px;
+		display: flex;
+		background-color: red;
+		z-index: 1;
+	}
+
+	&__heading {
+		width: 60%;
+		margin-top: 8rem;
+
+		h1 {
+			margin: 0;
+			text-transform: uppercase;
+			color: #fff;
+			@include Font;
+			font-size: 64px;
+			line-height: 64px;
+			margin-bottom: 2rem;
+		}
+
+		p {
+			color: #fff;
+			@include Font;
+			margin: 0;
+			margin-top: 1.5rem;
+			font-size: 18px;
+		}
+
+		a,
+		a:visited,
+		a:active {
+			color: #fff;
+			text-decoration: none;
+
+			&:hover {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.content{
+
+	h2{
+		@include Font;
+		margin: 0;
+		color: $skid-color-1;
+		font-weight: 200;
+		font-size: 40px;
+	}
+
+	h3{
+		@include Font;
+		margin: 0;
+		font-size: 28px;
+		color: $skid-color-1;
+		text-transform: uppercase;
+		margin-top: 1rem;
+	}
+
+	h4{
+		@include Font;
+		margin: 0;
+		font-size: 32px;
+		font-weight: 200;
+		color: $skid-color-1;
+	}
+
+	p{
+		@include Font;
+		margin: 0;
+		color: $skid-color-5;
+		font-weight: 100;
+		font-size: 18px;
+		margin-top: 1rem;
+		line-height: 24px;
+	}
+	&__container{
+		@include Container;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__left{
+		width: 60%;
+	}
+	&__right{
+		width: 35%;
+	}
+}
+
+.block{
+	width: 100%;
+	height: auto;
+	border: 4px solid $skid-color-3;
+	padding: 2rem;
+
+	ul{
+		padding: 0;
+		margin: 0;
+
+		li{
+			list-style: none;
+			@include Font;
+			text-transform: uppercase;
+			font-size: 20px;
+			font-weight: 600;
+			color: $skid-color-1;
+		}
+	}
+}
+
+
+
+.button {
+	&__orange {
+		padding: 15px 20px;
+		text-decoration: none;
+		color: #fff;
+		background-color: $skid-color-2;
+		@include Font;
+		font-size: 20px;
+		transition: all .25s ease;
+
+		&:hover {
+			color: #fff;
+			background-color: $skid-color-3;
+			text-decoration: none !important;
+		}
+	}
+}
+
+.button__animated {
+	display: inline-block;
+	position: relative;
+	color: hsl(222, 25%, 14%);
+}
+
+.button__animated::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	transform-origin: bottom right;
+	transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.button__animated:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+
 
 /*--------------------------------------------------------------
 # Generic

@@ -21,7 +21,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -49,19 +48,278 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.header__container {
+	width: 1440px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: flex-end;
+}
+
+@media screen and (max-width: 1440px) {
+	.header__container {
+		width: calc(100% - 3rem);
+	}
+}
+
+.header__top {
+	height: 40px;
+	background-color: #fff;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.header__top--logo {
+	width: 145px;
+	height: 250px;
+	background-color: #fff;
+	box-shadow: 0px 5px 10px #00000029;
+}
+
+.header__main {
+	background-color: #0870B8;
+	height: 90px;
+	width: 100%;
+	display: flex;
+}
+
+.header__main--nav {
+	width: 40%;
+	height: 100%;
+	display: flex;
+	margin-right: 20px;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.header__main--nav a,
+.header__main--nav a:visited,
+.header__main--nav a:active {
+	margin-left: 30px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.header__main--nav a:hover,
+.header__main--nav a:visited:hover,
+.header__main--nav a:active:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.banner {
+	padding: 0 0 12rem;
+	position: relative;
+}
+
+.banner__background {
+	height: 650px;
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+	background-color: darkslategray;
+	z-index: -1;
+}
+
+.banner__container {
+	width: 1440px;
+	margin: 0 auto;
+	display: flex;
+	align-items: stretch;
+	height: 450px;
+}
+
+@media screen and (max-width: 1440px) {
+	.banner__container {
+		width: calc(100% - 3rem);
+	}
+}
+
+.banner__image {
+	width: 40%;
+	height: 600px;
+	display: flex;
+	background-color: red;
+	z-index: 1;
+}
+
+.banner__heading {
+	width: 60%;
+	margin-top: 8rem;
+}
+
+.banner__heading h1 {
+	margin: 0;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 64px;
+	line-height: 64px;
+	margin-bottom: 2rem;
+}
+
+.banner__heading p {
+	color: #fff;
+	font-family: 'PT Sans', sans-serif;
+	margin: 0;
+	margin-top: 1.5rem;
+	font-size: 18px;
+}
+
+.banner__heading a,
+.banner__heading a:visited,
+.banner__heading a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+.banner__heading a:hover,
+.banner__heading a:visited:hover,
+.banner__heading a:active:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.content h2 {
+	font-family: 'PT Sans', sans-serif;
+	margin: 0;
+	color: #0870B8;
+	font-weight: 200;
+	font-size: 40px;
+}
+
+.content h3 {
+	font-family: 'PT Sans', sans-serif;
+	margin: 0;
+	font-size: 28px;
+	color: #0870B8;
+	text-transform: uppercase;
+	margin-top: 1rem;
+}
+
+.content h4 {
+	font-family: 'PT Sans', sans-serif;
+	margin: 0;
+	font-size: 32px;
+	font-weight: 200;
+	color: #0870B8;
+}
+
+.content p {
+	font-family: 'PT Sans', sans-serif;
+	margin: 0;
+	color: #808080;
+	font-weight: 100;
+	font-size: 18px;
+	margin-top: 1rem;
+	line-height: 24px;
+}
+
+.content__container {
+	width: 1440px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+@media screen and (max-width: 1440px) {
+	.content__container {
+		width: calc(100% - 3rem);
+	}
+}
+
+.content__left {
+	width: 60%;
+}
+
+.content__right {
+	width: 35%;
+}
+
+.block {
+	width: 100%;
+	height: auto;
+	border: 4px solid #4BAADD;
+	padding: 2rem;
+}
+
+.block ul {
+	padding: 0;
+	margin: 0;
+}
+
+.block ul li {
+	list-style: none;
+	font-family: 'PT Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 600;
+	color: #0870B8;
+}
+
+.button__orange {
+	padding: 15px 20px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #FF8A15;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 20px;
+	transition: all .25s ease;
+}
+
+.button__orange:hover {
+	color: #fff;
+	background-color: #4BAADD;
+	text-decoration: none !important;
+}
+
+.button__animated {
+	display: inline-block;
+	position: relative;
+	color: #1b202d;
+}
+
+.button__animated::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	transform-origin: bottom right;
+	transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.button__animated:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
 
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
-
 /* Normalize
 --------------------------------------------- */
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
 /* Document
 	 ========================================================================== */
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -73,7 +331,6 @@ html {
 
 /* Sections
 	 ========================================================================== */
-
 /**
  * Remove the margin in all browsers.
  */
@@ -99,7 +356,6 @@ h1 {
 
 /* Grouping content
 	 ========================================================================== */
-
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
@@ -121,7 +377,6 @@ pre {
 
 /* Text-level semantics
 	 ========================================================================== */
-
 /**
  * Remove the gray background on active links in IE 10.
  */
@@ -187,7 +442,6 @@ sup {
 
 /* Embedded content
 	 ========================================================================== */
-
 /**
  * Remove the border on images inside links in IE 10.
  */
@@ -197,7 +451,6 @@ img {
 
 /* Forms
 	 ========================================================================== */
-
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
@@ -343,7 +596,6 @@ textarea {
 
 /* Interactive
 	 ========================================================================== */
-
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
@@ -360,7 +612,6 @@ summary {
 
 /* Misc
 	 ========================================================================== */
-
 /**
  * Add the correct display in IE 10+.
  */
@@ -377,7 +628,6 @@ template {
 
 /* Box sizing
 --------------------------------------------- */
-
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
@@ -393,7 +643,6 @@ html {
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-
 /* Typography
 --------------------------------------------- */
 body,
@@ -540,9 +789,7 @@ a:visited {
 	color: #800080;
 }
 
-a:hover,
-a:focus,
-a:active {
+a:hover, a:focus, a:active {
 	color: #191970;
 }
 
@@ -550,8 +797,7 @@ a:focus {
 	outline: thin dotted;
 }
 
-a:hover,
-a:active {
+a:hover, a:active {
 	outline: 0;
 }
 
@@ -577,8 +823,7 @@ input[type="submit"]:hover {
 	border-color: #ccc #bbb #aaa;
 }
 
-button:active,
-button:focus,
+button:active, button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -640,11 +885,9 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
@@ -704,20 +947,16 @@ textarea {
 }
 
 @media screen and (min-width: 37.5em) {
-
 	.menu-toggle {
 		display: none;
 	}
-
 	.main-navigation ul {
 		display: flex;
 	}
 }
 
-.site-main .comment-navigation,
-.site-main
-.posts-navigation,
-.site-main
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
 .post-navigation {
 	margin: 0 0 1.5em;
 }
@@ -877,10 +1116,8 @@ textarea {
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
-
 /* Jetpack infinite scroll
 --------------------------------------------- */
-
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
@@ -895,10 +1132,8 @@ textarea {
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
-
 /* Accessibility
 --------------------------------------------- */
-
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
@@ -941,20 +1176,16 @@ textarea {
 /* Alignments
 --------------------------------------------- */
 .alignleft {
-
 	/*rtl:ignore*/
 	float: left;
-
 	/*rtl:ignore*/
 	margin-right: 1.5em;
 	margin-bottom: 1.5em;
 }
 
 .alignright {
-
 	/*rtl:ignore*/
 	float: right;
-
 	/*rtl:ignore*/
 	margin-left: 1.5em;
 	margin-bottom: 1.5em;
@@ -967,3 +1198,5 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+
+/*# sourceMappingURL=style.css.map */

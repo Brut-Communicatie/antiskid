@@ -25,35 +25,16 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'antiskid' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$antiskid_description = get_bloginfo( 'description', 'display' );
-			if ( $antiskid_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $antiskid_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'antiskid' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+	<header id="masthead" class="header">
+	<div class="header__top">
+		<div class="header__top--logo"></div>
+	</div>
+	<div class="header__main">
+		<div class="header__container">
+			<div class="header__main--nav">	
+				<a href="#" class="button__animated">0031 1234 5678</a>
+				<a class="button__orange" href="#">Contact</a>
+			</div>
+		</div>
+	</div>
 	</header><!-- #masthead -->
