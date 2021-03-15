@@ -147,6 +147,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	z-index: -1;
 }
 
+@media screen and (max-width: 1000px) {
+	.banner__background {
+		height: 675px;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+	}
+}
+
 @media screen and (max-width: 750px) {
 	.banner__background {
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
@@ -416,6 +423,113 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .block ul li:not(:first-child) {
 	margin-top: 1rem;
+}
+
+.usp {
+	width: 100%;
+	background-color: #F7F8F8;
+	margin-top: 4rem;
+}
+
+.usp__container {
+	padding: 3rem 0 4rem;
+	width: 1440px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 1440px) {
+	.usp__container {
+		width: calc(100% - 3rem);
+	}
+}
+
+.usp__container h2 {
+	margin: 0;
+	text-transform: uppercase;
+	color: #0870B8;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 64px;
+	line-height: 64px;
+	margin-bottom: 4rem;
+	text-align: center;
+}
+
+.usp__overview {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+	.usp__overview {
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.usp__overview {
+		flex-direction: column;
+		justify-items: flex-start;
+	}
+}
+
+.usp__item {
+	width: calc(100% / 5 - 20px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-items: stretch;
+	font-family: 'PT Sans', sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+	.usp__item {
+		width: calc(100% / 3 - 20px);
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.usp__item {
+		width: 100%;
+		margin-bottom: 0;
+		justify-items: flex-start;
+	}
+}
+
+.usp__item--icon {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 3px solid #4BAADD;
+	margin-bottom: 1rem;
+}
+
+.usp__item svg {
+	height: 100px;
+	width: 100px;
+}
+
+.usp__item h3 {
+	text-align: center;
+	font-size: 20px;
+	color: #0870B8;
+	margin: 0;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+.usp__item p {
+	text-align: center;
+	font-size: 16px;
+	font-style: italic;
+	color: #6B7E88;
+	margin: 0;
+	margin-top: 2rem;
+	font-weight: 600;
 }
 
 .button__orange {
