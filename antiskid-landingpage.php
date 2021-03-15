@@ -19,24 +19,15 @@ get_header();?>
 
 <div class="content">
     <div class="content__container">
+
         <div class="content__left">
-        <h2>POSSEHL Antiskid®</h2>
-        <h3>The best solution for airports to operate more efficient, sustainable and safe.</h3>
-        <p>Sustainability is becoming more important and weather conditions are becoming more extreme. Critical to landing and takeoff safety is the traction of the landing gear tires on the runway surface. The high-friction properties of Antiskid significantly reduce runway occupation time, while increasing safety and capacity and, thereby, profitability.</p>
+            <?php get_template_part('content/intro', 'left');?>
         </div>
 
         <div class="content__right">
-            <div class="block">
-                <h4>POSSEHL Antiskid® for:</h4>
-                <ul>
-                    <li>Maximized operations</li>
-                    <li>Safety in all (extreme) climatic conditions</li>
-                    <li>Sustainable runways</li>
-                    <li>Doubled runway lifecycle</li>
-                    <li>Savings on OPEX</li>
-                </ul>
-            </div>
+            <?php get_template_part('content/intro', 'right');?>
         </div>
+
     </div>
 </div>
 

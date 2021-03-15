@@ -63,6 +63,14 @@ $skid-color-4: #F7F8F8;
 $skid-color-5: #808080;
 $skid-color-6: #6B7E88;
 $containerWidth: 1440px;
+$tabletBreakpoint: 1000px;
+$mobileBreakpoint: 750px;
+
+@mixin Responsive($breakpoint: false){
+	@media screen and (max-width: $breakpoint){
+		@content;
+	}
+}
 
 @mixin Container {
 	width: $containerWidth;
@@ -99,11 +107,18 @@ $containerWidth: 1440px;
 		align-items: center;
 		z-index: 1;
 
+		@include Responsive($mobileBreakpoint){
+			justify-content: flex-start;
+		}
+
 		&--logo {
 			width: 145px;
 			height: 250px;
 			background-color: #fff;
 			box-shadow: 0px 5px 10px #00000029;
+			@include Responsive($mobileBreakpoint){
+				margin-left: 2rem;
+			}
 		}
 	}
 
@@ -154,6 +169,11 @@ $containerWidth: 1440px;
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
 		background-color: darkslategray;
 		z-index: -1;
+
+		@include Responsive($mobileBreakpoint){
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+			height: 575px;
+		}
 	}
 
 	&__container {
@@ -169,11 +189,21 @@ $containerWidth: 1440px;
 		display: flex;
 		background-color: red;
 		z-index: 1;
+
+		@include Responsive($mobileBreakpoint){
+			display: none;
+		}
+
 	}
 
 	&__heading {
 		width: 60%;
 		margin-top: 8rem;
+
+		@include Responsive($mobileBreakpoint){
+			width: 100%;
+			margin-top: 3rem;
+		}
 
 		h1 {
 			margin: 0;
@@ -207,9 +237,9 @@ $containerWidth: 1440px;
 	}
 }
 
-.content{
+.content {
 
-	h2{
+	h2 {
 		@include Font;
 		margin: 0;
 		color: $skid-color-1;
@@ -217,7 +247,7 @@ $containerWidth: 1440px;
 		font-size: 40px;
 	}
 
-	h3{
+	h3 {
 		@include Font;
 		margin: 0;
 		font-size: 28px;
@@ -226,15 +256,20 @@ $containerWidth: 1440px;
 		margin-top: 1rem;
 	}
 
-	h4{
+	h4 {
 		@include Font;
 		margin: 0;
 		font-size: 32px;
 		font-weight: 200;
 		color: $skid-color-1;
+		line-height: 37px;
+
+		strong{
+			font-weight: 700;
+		}
 	}
 
-	p{
+	p {
 		@include Font;
 		margin: 0;
 		color: $skid-color-5;
@@ -243,38 +278,136 @@ $containerWidth: 1440px;
 		margin-top: 1rem;
 		line-height: 24px;
 	}
-	&__container{
+
+	&__container {
 		@include Container;
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+
+		@include Responsive($mobileBreakpoint){
+			flex-direction: column;
+			justify-self: flex-start;
+			align-items: flex-start;
+		}
 	}
 
-	&__left{
+	&__left {
 		width: 60%;
+
+		@include Responsive($mobileBreakpoint){
+			width: 100%;
+			margin-bottom: 2rem;
+		}
 	}
-	&__right{
+
+	&__right {
 		width: 35%;
+
+		@include Responsive($mobileBreakpoint){
+			width: 100%;
+		}
+	}
+
+	&__video{
+		margin-top: 6rem;
+	}
+	&__bottom{
+		margin-top: 4rem;
 	}
 }
 
-.block{
+.quote{
+	margin-top: 2rem;
+	p{
+		text-align: center;
+		width: 60%;
+		margin: 0 auto;
+		margin-bottom: 1.5rem;
+		@include Font;
+		i{
+			font-style: italic;
+		}
+	}
+
+	h5{
+		@include Font;
+		font-size: 28px;
+		font-style: italic;
+		margin: 0 auto;
+		text-align: center;
+		color: $skid-color-6;
+	}
+
+	h6{
+		@include Font;
+		font-size: 18px;
+		text-align: center;
+		color: $skid-color-6;
+		width: 70%;
+		margin: 0 auto;
+		i{
+			font-style: italic;
+		}
+	}
+}
+
+.numbers{
+	width: 100%;
+	border-top: 3px solid $skid-color-1;
+	border-bottom: 3px solid $skid-color-1;
+
+	display: flex;
+	justify-content: space-around;
+	margin-top: 4rem;
+	
+	&__item{
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem 0;
+		p{
+			color: $skid-color-1;
+			font-size: 18px;
+			margin: 0;
+			font-weight: 600;
+			text-transform: uppercase;
+			@include Font;
+			strong{
+				font-size: 32px;
+			}
+
+			&:nth-child(2){
+				margin: 1rem 0;
+			}
+		}
+	}
+}
+
+.block {
 	width: 100%;
 	height: auto;
 	border: 4px solid $skid-color-3;
 	padding: 2rem;
 
-	ul{
+	ul {
 		padding: 0;
 		margin: 0;
 
-		li{
+		li {
 			list-style: none;
 			@include Font;
 			text-transform: uppercase;
 			font-size: 20px;
 			font-weight: 600;
 			color: $skid-color-1;
+			&:first-child{
+				margin-top: 2rem;
+			}
+			&:not(:first-child){
+				margin-top: 1rem;
+			}
 		}
 	}
 }

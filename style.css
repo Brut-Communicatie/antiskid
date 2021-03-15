@@ -79,11 +79,23 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	z-index: 1;
 }
 
+@media screen and (max-width: 750px) {
+	.header__top {
+		justify-content: flex-start;
+	}
+}
+
 .header__top--logo {
 	width: 145px;
 	height: 250px;
 	background-color: #fff;
 	box-shadow: 0px 5px 10px #00000029;
+}
+
+@media screen and (max-width: 750px) {
+	.header__top--logo {
+		margin-left: 2rem;
+	}
 }
 
 .header__main {
@@ -135,6 +147,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	z-index: -1;
 }
 
+@media screen and (max-width: 750px) {
+	.banner__background {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+		height: 575px;
+	}
+}
+
 .banner__container {
 	width: 1440px;
 	margin: 0 auto;
@@ -157,9 +176,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	z-index: 1;
 }
 
+@media screen and (max-width: 750px) {
+	.banner__image {
+		display: none;
+	}
+}
+
 .banner__heading {
 	width: 60%;
 	margin-top: 8rem;
+}
+
+@media screen and (max-width: 750px) {
+	.banner__heading {
+		width: 100%;
+		margin-top: 3rem;
+	}
 }
 
 .banner__heading h1 {
@@ -217,6 +249,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	font-size: 32px;
 	font-weight: 200;
 	color: #0870B8;
+	line-height: 37px;
+}
+
+.content h4 strong {
+	font-weight: 700;
 }
 
 .content p {
@@ -243,12 +280,113 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+@media screen and (max-width: 750px) {
+	.content__container {
+		flex-direction: column;
+		justify-self: flex-start;
+		align-items: flex-start;
+	}
+}
+
 .content__left {
 	width: 60%;
 }
 
+@media screen and (max-width: 750px) {
+	.content__left {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+}
+
 .content__right {
 	width: 35%;
+}
+
+@media screen and (max-width: 750px) {
+	.content__right {
+		width: 100%;
+	}
+}
+
+.content__video {
+	margin-top: 6rem;
+}
+
+.content__bottom {
+	margin-top: 4rem;
+}
+
+.quote {
+	margin-top: 2rem;
+}
+
+.quote p {
+	text-align: center;
+	width: 60%;
+	margin: 0 auto;
+	margin-bottom: 1.5rem;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.quote p i {
+	font-style: italic;
+}
+
+.quote h5 {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 28px;
+	font-style: italic;
+	margin: 0 auto;
+	text-align: center;
+	color: #6B7E88;
+}
+
+.quote h6 {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 18px;
+	text-align: center;
+	color: #6B7E88;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.quote h6 i {
+	font-style: italic;
+}
+
+.numbers {
+	width: 100%;
+	border-top: 3px solid #0870B8;
+	border-bottom: 3px solid #0870B8;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 4rem;
+}
+
+.numbers__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 0;
+}
+
+.numbers__item p {
+	color: #0870B8;
+	font-size: 18px;
+	margin: 0;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.numbers__item p strong {
+	font-size: 32px;
+}
+
+.numbers__item p:nth-child(2) {
+	margin: 1rem 0;
 }
 
 .block {
@@ -270,6 +408,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	font-size: 20px;
 	font-weight: 600;
 	color: #0870B8;
+}
+
+.block ul li:first-child {
+	margin-top: 2rem;
+}
+
+.block ul li:not(:first-child) {
+	margin-top: 1rem;
 }
 
 .button__orange {
