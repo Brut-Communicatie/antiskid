@@ -130,6 +130,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	text-decoration: none;
 }
 
+@media screen and (max-width: 750px) {
+	.header__main--nav {
+		width: 100%;
+	}
+}
+
 .banner {
 	padding: 0 0 12rem;
 	position: relative;
@@ -179,7 +185,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	width: 40%;
 	height: 600px;
 	display: flex;
-	background-color: red;
+	background-color: blue;
 	z-index: 1;
 }
 

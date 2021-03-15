@@ -150,6 +150,10 @@ $mobileBreakpoint: 750px;
 					text-decoration: none;
 				}
 			}
+
+			@include Responsive($mobileBreakpoint){
+				width: 100%;
+			}
 		}
 	}
 }
@@ -191,7 +195,7 @@ $mobileBreakpoint: 750px;
 		width: 40%;
 		height: 600px;
 		display: flex;
-		background-color: red;
+		background-color: blue;
 		z-index: 1;
 
 		@include Responsive($mobileBreakpoint) {
