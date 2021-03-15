@@ -474,11 +474,12 @@ $mobileBreakpoint: 750px;
 		@include Font;
 		@include Responsive($tabletBreakpoint) {
 			width: calc(100% / 3 - 20px);
+			margin-bottom: 2rem;
 		}
 
 		@include Responsive($mobileBreakpoint) {
 			width: 100%;
-			margin-bottom: 0;
+			margin-bottom: 2rem;
 			justify-items: flex-start;
 		}
 		&--icon{

@@ -489,13 +489,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @media screen and (max-width: 1000px) {
 	.usp__item {
 		width: calc(100% / 3 - 20px);
+		margin-bottom: 2rem;
 	}
 }
 
 @media screen and (max-width: 750px) {
 	.usp__item {
 		width: 100%;
-		margin-bottom: 0;
+		margin-bottom: 2rem;
 		justify-items: flex-start;
 	}
 }
