@@ -27,7 +27,9 @@
 
 	<header id="masthead" class="header">
 	<div class="header__top">
-		<div class="header__top--logo"></div>
+		<div class="header__top--logo">
+			<img src="<?php echo get_template_directory_uri();?>/images/logo.png" width="100px" alt="Logo" />
+		</div>
 	</div>
 	<div class="header__main">
 		<div class="header__container">

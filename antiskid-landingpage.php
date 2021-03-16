@@ -31,4 +31,6 @@ get_header();?>
 
 <?php get_template_part('content/bar', 'usp');?>
 
+<?php get_template_part('content/bar', 'bottom');?>
+
 <?php get_footer();?>
