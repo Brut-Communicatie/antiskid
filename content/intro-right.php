@@ -1,11 +1,11 @@
 <div class="block">
     <h4>POSSEHL Antiskid® for:</h4>
     <ul>
-        <li>Maximized operations</li>
-        <li>Safety in all (extreme) climatic conditions</li>
-        <li>Sustainable runways</li>
-        <li>Doubled runway lifecycle</li>
-        <li>Savings on OPEX</li>
+        <li><img src="<?php echo get_template_directory_uri();?>/images/check.svg" width="20px" alt="Check" /> <p>Maximized operations<p></li>
+        <li><img src="<?php echo get_template_directory_uri();?>/images/check.svg" width="20px" alt="Check" /> <p>Safety in all (extreme) climatic conditions</p></li>
+        <li><img src="<?php echo get_template_directory_uri();?>/images/check.svg" width="20px" alt="Check" /> <p>Sustainable runways</p></li>
+        <li><img src="<?php echo get_template_directory_uri();?>/images/check.svg" width="20px" alt="Check" /> <p>Doubled runway lifecycle</p></li>
+        <li><img src="<?php echo get_template_directory_uri();?>/images/check.svg" width="20px" alt="Check" /> <p>Savings on OPEX</p></li>
     </ul>
 </div>
 

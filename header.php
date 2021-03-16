@@ -34,8 +34,8 @@
 	<div class="header__main">
 		<div class="header__container">
 			<div class="header__main--nav">	
-				<a href="#" class="button__animated">0031 1234 5678</a>
-				<a class="button__orange" href="#">Contact</a>
+				<a href="tel:003112345678" class="button__animated"><img src="<?php echo get_template_directory_uri();?>/images/phone.svg" width="20px" alt="phone" />0031 1234 5678</a>
+				<a class="button__orange" href="#contact">Contact</a>
 			</div>
 		</div>
 	</div>

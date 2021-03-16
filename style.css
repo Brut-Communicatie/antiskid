@@ -152,6 +152,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	.header__main--nav {
 		width: 100%;
 	}
+	.header__main--nav .button__animated {
+		display: none;
+	}
 }
 
 .banner {
@@ -251,6 +254,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin: 0;
 	margin-top: 1.5rem;
 	font-size: 18px;
+	display: flex;
+}
+
+.banner__heading p img {
+	margin-left: 5px;
 }
 
 .banner__heading a,
@@ -450,6 +458,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	font-size: 20px;
 	font-weight: 600;
 	color: #0870B8;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.block ul li p {
+	font-family: 'PT Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 600;
+	color: #0870B8;
+	margin: 0;
+	margin-left: 10px;
 }
 
 .block ul li:first-child {
@@ -543,6 +564,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	border-radius: 50%;
 	border: 3px solid #4BAADD;
 	margin-bottom: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .usp__item svg {
@@ -573,6 +597,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	width: 100%;
 	height: 30rem;
 	position: relative;
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+@media screen and (max-width: 1440px) {
+	.bottom {
+		background-image: unset !important;
+	}
 }
 
 .bottom__background {
@@ -589,7 +622,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media screen and (max-width: 1440px) {
 	.bottom__background {
+		height: 45vw;
+	}
+}
+
+@media screen and (max-width: 1160px) {
+	.bottom__background {
 		height: 50vw;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.bottom__background {
+		clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
+		height: 35rem;
 	}
 }
 
@@ -609,6 +655,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+@media screen and (max-width: 1000px) {
+	.bottom__container {
+		padding: 0 0 2rem;
+		align-items: flex-end;
+	}
+}
+
 .bottom__left {
 	width: 50%;
 	margin-right: 5%;
@@ -617,6 +670,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+	.bottom__left {
+		width: 100%;
+	}
 }
 
 .bottom__left h4 {
@@ -640,6 +699,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	color: #fff;
 	align-self: flex-end;
 	margin: 0;
+	font-size: 20px;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
 }
 
 .bottom__left a, .bottom__left a:visited {
@@ -648,6 +713,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	text-decoration: none;
 	align-self: flex-end;
 	text-align: right;
+	margin-left: 5px;
 }
 
 .bottom__left a:hover, .bottom__left a:visited:hover {
@@ -657,6 +723,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .bottom__right {
 	width: 18%;
+}
+
+@media screen and (max-width: 1000px) {
+	.bottom__right {
+		display: none;
+	}
 }
 
 .bottom__right img {
@@ -671,6 +743,84 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-top: -6px;
 	z-index: 2;
 	position: relative;
+}
+
+@media screen and (max-width: 1440px) {
+	.bottom__bar {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.bottom__bar {
+		margin-top: 0;
+		height: 50px;
+	}
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.contact .wpcf7 .ajax-loader {
+	display: none;
+}
+
+.contact p {
+	display: flex;
+}
+
+.contact p input {
+	width: 100%;
+}
+
+.contact__row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact__item, .contact__item--half {
+	margin-bottom: 10px;
+	font-family: 'PT Sans', sans-serif;
+	width: 100%;
+}
+
+.contact__item span, .contact__item--half span {
+	width: 100%;
+}
+
+.contact__item span input, .contact__item--half span input {
+	width: 100%;
+	border-radius: 0;
+	padding: 0.5rem;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.contact__item--half {
+	width: 49%;
+}
+
+.contact input[type="submit"] {
+	padding: 15px 20px;
+	text-decoration: none;
+	color: #fff;
+	width: fit-content;
+	background-color: #FF8A15;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 20px;
+	transition: all .25s ease;
+	border-radius: 0;
+	border: 0;
+	align-self: flex-end;
+	margin-left: auto;
+}
+
+.contact input[type="submit"]:hover {
+	color: #fff;
+	background-color: #4BAADD;
+	text-decoration: none !important;
 }
 
 .button__orange {
@@ -693,6 +843,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	display: inline-block;
 	position: relative;
 	color: #1b202d;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+}
+
+.button__animated img {
+	filter: invert(100%);
+	margin-right: 5px;
 }
 
 .button__animated::after {

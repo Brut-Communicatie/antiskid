@@ -169,8 +169,14 @@ $mobileBreakpoint: 750px;
 				}
 			}
 
+			
+
 			@include Responsive($mobileBreakpoint) {
 				width: 100%;
+
+				.button__animated{
+					display: none;
+				}
 			}
 		}
 	}
@@ -259,6 +265,11 @@ $mobileBreakpoint: 750px;
 			margin: 0;
 			margin-top: 1.5rem;
 			font-size: 18px;
+			display: flex;
+
+			img{
+				margin-left: 5px;
+			}
 		}
 
 		a,
@@ -447,7 +458,18 @@ $mobileBreakpoint: 750px;
 			font-size: 20px;
 			font-weight: 600;
 			color: $skid-color-1;
-
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			p{
+				@include Font;
+				text-transform: uppercase;
+				font-size: 20px;
+				font-weight: 600;
+				color: $skid-color-1;
+				margin: 0;
+				margin-left: 10px;
+			}
 			&:first-child {
 				margin-top: 2rem;
 			}
@@ -526,6 +548,9 @@ $mobileBreakpoint: 750px;
 			border-radius: 50%;
 			border: 3px solid $skid-color-3;
 			margin-bottom: 1rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
 		svg {
@@ -558,6 +583,13 @@ $mobileBreakpoint: 750px;
 	width: 100%;
 	height: 30rem;
 	position: relative;
+	background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+	@include Responsive($containerWidth){
+		background-image: unset !important;
+	}
 	&__background {
 		width: 100%;
 		clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
@@ -570,7 +602,16 @@ $mobileBreakpoint: 750px;
 		z-index: 0;
 
 		@include Responsive($containerWidth){
+			height: 45vw;
+		}
+
+		@include Responsive(1160px){
 			height: 50vw;
+		}
+
+		@include Responsive($tabletBreakpoint){
+			clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
+			height: 35rem;
 		}
 	}
 
@@ -582,6 +623,11 @@ $mobileBreakpoint: 750px;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+
+		@include Responsive($tabletBreakpoint){
+			padding: 0 0 2rem;
+			align-items: flex-end;
+		}
 	}
 
 	&__left{
@@ -592,6 +638,10 @@ $mobileBreakpoint: 750px;
 		justify-content: flex-start;
 		align-items: center;
 		text-align: center;
+
+		@include Responsive($tabletBreakpoint){
+			width: 100%;
+		}
 
 		h4{
 			@include Font;
@@ -613,6 +663,12 @@ $mobileBreakpoint: 750px;
 			color: #fff;
 			align-self: flex-end;
 			margin: 0;
+			font-size: 20px;
+			font-weight: 600;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 10px;
 		}
 		a, a:visited{
 			@include Font;
@@ -620,6 +676,8 @@ $mobileBreakpoint: 750px;
 			text-decoration: none;
 			align-self: flex-end;
 			text-align: right;
+			margin-left: 5px;	
+	
 			&:hover{
 				color: #fff;
 				text-decoration: none;
@@ -629,6 +687,9 @@ $mobileBreakpoint: 750px;
 
 	&__right{
 		width: 18%;
+		@include Responsive($tabletBreakpoint){
+			display: none;
+		}
 
 		img{
 			width: 100%;
@@ -642,9 +703,76 @@ $mobileBreakpoint: 750px;
 		margin-top:-6px;
 		z-index: 2;
 		position: relative;
+		@include Responsive($containerWidth){
+			margin-top: 0;
+		}
+		@include Responsive($tabletBreakpoint){
+			margin-top: 0;
+			height: 50px;
+		}
 	}
 }
 
+
+.contact{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	.wpcf7 .ajax-loader {
+		display: none;
+	}
+	p{
+		display: flex;
+
+		input{
+			width: 100%;
+		}
+	}
+	&__row{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item{
+		margin-bottom: 10px;
+
+		@include Font;
+		width: 100%;
+		span{
+			width: 100%;
+			input{
+				width: 100%;
+				border-radius: 0;
+				padding: 0.5rem;
+				@include Font;
+			}
+		}
+		&--half{
+			@extend .contact__item;
+			width: 49%;
+		}
+	}
+
+
+	input[type="submit"]{
+		padding: 15px 20px;
+		text-decoration: none;
+		color: #fff;
+		width: fit-content;
+		background-color: $skid-color-2;
+		@include Font;
+		font-size: 20px;
+		transition: all .25s ease;
+		border-radius: 0;
+		border: 0;
+		align-self: flex-end;
+		margin-left: auto;
+		&:hover {
+			color: #fff;
+			background-color: $skid-color-3;
+			text-decoration: none !important;
+		}
+	}
+}
 .button {
 	&__orange {
 		padding: 15px 20px;
@@ -667,6 +795,15 @@ $mobileBreakpoint: 750px;
 	display: inline-block;
 	position: relative;
 	color: hsl(222, 25%, 14%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+
+	img{
+		filter: invert(100%);
+		margin-right: 5px;
+	}
 }
 
 .button__animated::after {
