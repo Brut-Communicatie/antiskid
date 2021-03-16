@@ -149,7 +149,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	left: 0;
 	width: 100%;
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
-	background-color: darkslategray;
+	background-size: cover;
 	z-index: -1;
 }
 
@@ -183,10 +183,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .banner__image {
 	width: 40%;
-	height: 600px;
+	height: 650px;
 	display: flex;
-	background-color: blue;
 	z-index: 1;
+}
+
+.banner__image img {
+	width: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+	.banner__image img {
+		object-fit: fill;
+		height: fit-content;
+	}
 }
 
 @media screen and (max-width: 750px) {

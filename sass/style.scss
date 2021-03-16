@@ -172,7 +172,8 @@ $mobileBreakpoint: 750px;
 		left: 0;
 		width: 100%;
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
-		background-color: darkslategray;
+		// background-color: darkslategray;
+		background-size: cover;
 		z-index: -1;
 		@include Responsive($tabletBreakpoint){
 			height: 675px;
@@ -193,10 +194,19 @@ $mobileBreakpoint: 750px;
 
 	&__image {
 		width: 40%;
-		height: 600px;
+		height: 650px;
 		display: flex;
-		background-color: blue;
 		z-index: 1;
+
+		img{
+			width: 100%;
+
+			@include Responsive($containerWidth){
+				object-fit: fill;
+				height: fit-content;
+
+			}
+		}
 
 		@include Responsive($mobileBreakpoint) {
 			display: none;

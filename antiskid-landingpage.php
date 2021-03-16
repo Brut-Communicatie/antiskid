@@ -5,7 +5,7 @@
 get_header();?>
 
 <div class="banner">
-    <div class="banner__background"></div>
+    <div class="banner__background" style="background-image: url('<?php echo get_template_directory_uri();?>/images/header.jpg');"></div>
     <div class="banner__container">
         <div class="banner__heading">
             <h1>Get a grip on your </br> turnover with Antiskid®</h1>
@@ -13,6 +13,7 @@ get_header();?>
             <p>or call <a href="#" class="button__animated">0031 1234 5678</a></p>
         </div>
         <div class="banner__image">
+        <img src="<?php echo get_template_directory_uri();?>/images/wiel.png" width="500px" alt="Wiel" />
         </div>
     </div>
 </div>
