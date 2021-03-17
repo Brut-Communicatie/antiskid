@@ -35,6 +35,7 @@ $callto = str_replace(' ', '', $tel);
 	<div class="header__main">
 		<div class="header__container">
 			<div class="header__main--nav">	
+				<a href="https://www.linkedin.com/company/possehl-spezialbau-gmbh" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri();?>/images/linkedin-brands.svg" width="30px" alt="LinkedIn" /></a>
 				<a href="tel:<?php echo $callto;?>" class="button__animated"><img src="<?php echo get_template_directory_uri();?>/images/phone.svg" width="20px" alt="phone" /><?php echo $tel;?></a>
 				<a class="button__orange" href="#contact">Contact</a>
 			</div>

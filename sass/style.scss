@@ -162,10 +162,18 @@ $mobileBreakpoint: 750px;
 				color: #fff;
 				text-decoration: none;
 				font-size: 18px;
-
+				display: flex;
+				align-items: center;
+				img{
+					filter: invert(100%);
+				}
 				&:hover {
 					color: #fff;
 					text-decoration: none;
+
+					img{
+						opacity: 0.8;
+					}
 				}
 			}
 
@@ -591,6 +599,11 @@ $mobileBreakpoint: 750px;
 	
 	@include Responsive(1250px){
 		background-image: unset !important;
+		height:28rem;
+	}
+
+	@include Responsive($mobileBreakpoint){
+		height:27rem;
 	}
 
 	&__section{
@@ -728,6 +741,7 @@ $mobileBreakpoint: 750px;
 		margin-top:-6px;
 		z-index: 2;
 		position: relative;
+		align-items: center;
 		@include Responsive($containerWidth){
 			margin-top: 0;
 		}
@@ -735,6 +749,21 @@ $mobileBreakpoint: 750px;
 			margin-top: 0;
 			height: 50px;
 		}
+
+		&--container{
+			@include Container;
+
+			a, a:active, a:visited, a:link{
+				color: $skid-color-1;
+				@include Font;
+				font-size: 18px;
+
+				&:hover{
+					color: $skid-color-3;
+				}
+			}
+		}
+		
 	}
 }
 
