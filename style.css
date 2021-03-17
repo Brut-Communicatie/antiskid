@@ -640,6 +640,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+@media screen and (max-width: 565px) {
+	.bottom__section {
+		height: 37rem;
+	}
+}
+
 .bottom__background {
 	width: 100%;
 	clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);

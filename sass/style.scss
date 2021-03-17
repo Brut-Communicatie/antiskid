@@ -608,6 +608,10 @@ $mobileBreakpoint: 750px;
 		@include Responsive($mobileBreakpoint){
 			height: 34rem;
 		}
+
+		@include Responsive(565px){
+			height: 37rem;
+		}
 	}
 	&__background {
 		width: 100%;
