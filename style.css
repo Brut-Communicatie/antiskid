@@ -617,9 +617,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .bottom__section {
 	overflow-y: hidden;
-	height: 40rem;
+	height: 39rem;
 	padding: 10rem 0 0;
 	margin-top: -10rem;
+}
+
+@media screen and (max-width: 1440px) {
+	.bottom__section {
+		height: 37rem;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.bottom__section {
+		height: 37rem;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.bottom__section {
+		height: 34rem;
+	}
 }
 
 .bottom__background {

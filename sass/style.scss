@@ -595,9 +595,19 @@ $mobileBreakpoint: 750px;
 
 	&__section{
 		overflow-y: hidden;
-		height: 40rem;
+		height: 39rem;
 		padding: 10rem 0 0;
-		margin-top: -10rem;
+		margin-top: -10rem; 
+
+		@include Responsive($containerWidth){
+			height: 37rem;
+		}
+		@include Responsive($tabletBreakpoint){
+			height: 37rem;
+		}
+		@include Responsive($mobileBreakpoint){
+			height: 34rem;
+		}
 	}
 	&__background {
 		width: 100%;
