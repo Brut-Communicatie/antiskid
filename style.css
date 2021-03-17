@@ -1845,4 +1845,8 @@ textarea {
 	margin: 0 !important;
 }
 
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+	display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
