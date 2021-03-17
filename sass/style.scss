@@ -633,7 +633,7 @@ $mobileBreakpoint: 750px;
 		align-items: center;
 		text-align: center;
 
-		@include Responsive($tabletBreakpoint){
+		@include Responsive(1250px){
 			width: 100%;
 		}
 

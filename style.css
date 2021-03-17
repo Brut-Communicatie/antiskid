@@ -666,7 +666,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	text-align: center;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
 	.bottom__left {
 		width: 100%;
 	}
