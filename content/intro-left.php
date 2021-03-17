@@ -7,7 +7,7 @@
 </p>
 
 <div class="content__video">
-<h4>Curious to see all ins and outs of Possehl Antiskid®? </br><strong>Check out this video animation below.</strong></h4>
+<h4>Curious to see all ins and outs of Possehl Antiskid®? </br><strong>Check out this video animation.</strong></h4>
 <video>
 </video>
 <p>Antiskid® is a rigid surface that is applied over runway asphalt. The surface layer is similar to coarse sandpaper. It consists mainly of epoxy and sharp basalt.</p>
@@ -15,5 +15,5 @@
 
 <div class="content__bottom">
     <h4><strong>Did you know?</strong></h4>
-    <p>Antiskid extends the service life of the runway surfaces between five to eight years. It requires virtually no maintenance and protects the underlying asphalt, which in turn also lasts longer and requires less maintenance. Although the investment costs are higher, the life cycle costs are significantly lower.</p>
+    <p>Antiskid® extends the service life of the runway surfaces between five to eight years. It requires virtually no maintenance and protects the underlying asphalt, which in turn also lasts longer and requires less maintenance. Although the investment costs are higher, the life cycle costs are significantly lower.</p>
 </div>
