@@ -690,6 +690,11 @@ $mobileBreakpoint: 750px;
 
 		img{
 			width: 100%;
+			transform: translateY(2.4rem);
+
+			@include Responsive($containerWidth){
+				transform: translateY(7.4rem);
+			}
 		}
 	}
 	&__bar{

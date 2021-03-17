@@ -733,6 +733,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .bottom__right img {
 	width: 100%;
+	transform: translateY(2.4rem);
+}
+
+@media screen and (max-width: 1440px) {
+	.bottom__right img {
+		transform: translateY(7.4rem);
+	}
 }
 
 .bottom__bar {

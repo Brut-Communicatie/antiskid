@@ -19,5 +19,6 @@ $callto = str_replace(' ', '', $tel);
             <img src="<?php echo get_template_directory_uri();?>/images/person.png" width="300px" alt="Guy" />
         </div>
     </div>
-    <div class="bottom__bar"></div>
+
 </section>
+<div class="bottom__bar"></div>
