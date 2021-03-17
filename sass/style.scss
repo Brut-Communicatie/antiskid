@@ -884,3 +884,7 @@ $mobileBreakpoint: 750px;
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+.page{
+	margin: 0 !important;
+}

@@ -1774,4 +1774,8 @@ textarea {
 	margin-bottom: 1.5em;
 }
 
+.page {
+	margin: 0 !important;
+}
+
 /*# sourceMappingURL=style.css.map */
