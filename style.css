@@ -615,6 +615,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+.bottom__section {
+	overflow-y: hidden;
+	height: 40rem;
+	padding: 10rem 0 0;
+	margin-top: -10rem;
+}
+
 .bottom__background {
 	width: 100%;
 	clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
