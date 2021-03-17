@@ -2,7 +2,7 @@
 <h3>The best solution for airports to operate more efficient, sustainable and safe.</h3>
 <p>Sustainability is becoming more important and weather conditions are becoming more extreme. Critical to landing and
     takeoff safety is the traction of the landing gear tires on the runway surface. The high-friction properties of
-    Antiskid significantly reduce runway occupation time, while increasing safety and capacity and, thereby,
+    Antiskid® significantly reduce runway occupation time, while increasing safety and capacity and, thereby,
     profitability.
 </p>
 

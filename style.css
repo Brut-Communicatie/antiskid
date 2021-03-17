@@ -602,7 +602,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-size: contain;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1250px) {
 	.bottom {
 		background-image: unset !important;
 	}
@@ -622,17 +622,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media screen and (max-width: 1440px) {
 	.bottom__background {
-		height: 45vw;
+		height: 41rem;
 	}
 }
 
-@media screen and (max-width: 1160px) {
-	.bottom__background {
-		height: 50vw;
-	}
-}
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
 	.bottom__background {
 		clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
 		height: 35rem;
@@ -725,7 +719,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	width: 18%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
 	.bottom__right {
 		display: none;
 	}
