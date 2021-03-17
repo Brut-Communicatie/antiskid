@@ -935,3 +935,9 @@ $mobileBreakpoint: 750px;
 .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
     display: none;
 }
+
+.wpcf7-not-valid-tip {
+
+	color: #fff;
+	@include Font;
+}
