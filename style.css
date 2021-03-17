@@ -331,11 +331,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+@media screen and (max-width: 1000px) {
+	.content__container {
+		margin-top: 6rem;
+	}
+}
+
 @media screen and (max-width: 750px) {
 	.content__container {
 		flex-direction: column;
 		justify-self: flex-start;
 		align-items: flex-start;
+		margin-top: 2rem;
 	}
 }
 

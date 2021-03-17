@@ -333,10 +333,15 @@ $mobileBreakpoint: 750px;
 		align-items: flex-start;
 		margin-top: 2rem;
 
+		@include Responsive($tabletBreakpoint){
+			margin-top: 6rem;
+		}
+
 		@include Responsive($mobileBreakpoint) {
 			flex-direction: column;
 			justify-self: flex-start;
 			align-items: flex-start;
+			margin-top: 2rem;
 		}
 	}
 
