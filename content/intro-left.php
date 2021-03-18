@@ -21,5 +21,5 @@
 
 <div class="content__bottom">
     <h4><strong>Did you know?</strong></h4>
-    <p>Antiskid® extends the service life of the runway surfaces between five to eight years. It requires virtually no maintenance and protects the underlying asphalt, which in turn also lasts longer and requires less maintenance. Although the investment costs are higher, the lifecycle costs are significantly lower.</p>
+    <p>Antiskid® extends the service life of the runway surfaces between five to eight years. It requires virtually no maintenance and protects the underlying asphalt, which in turn also lasts longer and requires less maintenance. Although the investment costs are higher, the life cycle costs are significantly lower.</p>
 </div>
