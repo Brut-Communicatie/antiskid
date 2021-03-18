@@ -8,7 +8,7 @@
 
 <div class="content__video">
 <h4>Curious to see all ins and outs of Possehl Antiskid®? </br><strong>Check out this video animation below.</strong></h4>
-<video controls>
+<video controls poster="<?php echo get_template_directory_uri();?>/video/poster.jpg">
 <source src="<?php echo get_template_directory_uri();?>/possehl.webm"
             type="video/webm">
 
