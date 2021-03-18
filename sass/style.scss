@@ -162,14 +162,20 @@ $mobileBreakpoint: 750px;
 				color: #fff;
 				text-decoration: none;
 				font-size: 18px;
-
+				display: flex;
+				align-items: center;
+				img{
+					filter: invert(100%);
+				}
 				&:hover {
 					color: #fff;
 					text-decoration: none;
+
+					img{
+						opacity: 0.8;
+					}
 				}
 			}
-
-			
 
 			@include Responsive($mobileBreakpoint) {
 				width: 100%;
@@ -201,7 +207,7 @@ $mobileBreakpoint: 750px;
 		z-index: -1;
 
 		@include Responsive($tabletBreakpoint) {
-			height: 675px;
+			height: 715px;
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 		}
 
@@ -266,7 +272,7 @@ $mobileBreakpoint: 750px;
 			margin-top: 1.5rem;
 			font-size: 18px;
 			display: flex;
-
+			margin-left: 20px;
 			img{
 				margin-left: 5px;
 			}
@@ -335,10 +341,15 @@ $mobileBreakpoint: 750px;
 		align-items: flex-start;
 		margin-top: 2rem;
 
+		@include Responsive($tabletBreakpoint){
+			margin-top: 6rem;
+		}
+
 		@include Responsive($mobileBreakpoint) {
 			flex-direction: column;
 			justify-self: flex-start;
 			align-items: flex-start;
+			margin-top: 2rem;
 		}
 	}
 
@@ -480,7 +491,7 @@ $mobileBreakpoint: 750px;
 			}
 
 			&:not(:first-child) {
-				margin-top: 1rem;
+				margin-top: 2rem;
 			}
 		}
 	}
@@ -578,8 +589,7 @@ $mobileBreakpoint: 750px;
 			font-style: italic;
 			color: $skid-color-6;
 			margin: 0;
-			margin-top: 2rem;
-			font-weight: 600;
+			font-weight: 200;
 		}
 	}
 }
@@ -591,9 +601,35 @@ $mobileBreakpoint: 750px;
 	background-position: bottom left;
     background-repeat: no-repeat;
     background-size: contain;
-
-	@include Responsive($containerWidth){
+	
+	@include Responsive(1250px){
 		background-image: unset !important;
+		height:28rem;
+	}
+
+	@include Responsive($mobileBreakpoint){
+		height:27rem;
+	}
+
+	&__section{
+		overflow-y: hidden;
+		height: 39rem;
+		padding: 10rem 0 0;
+		margin-top: -10rem; 
+
+		@include Responsive($containerWidth){
+			height: 37rem;
+		}
+		@include Responsive($tabletBreakpoint){
+			height: 37rem;
+		}
+		@include Responsive($mobileBreakpoint){
+			height: 34rem;
+		}
+
+		@include Responsive(565px){
+			height: 37rem;
+		}
 	}
 	&__background {
 		width: 100%;
@@ -607,14 +643,11 @@ $mobileBreakpoint: 750px;
 		z-index: 0;
 
 		@include Responsive($containerWidth){
-			height: 45vw;
+			height: 41rem;
 		}
 
-		@include Responsive(1160px){
-			height: 50vw;
-		}
 
-		@include Responsive($tabletBreakpoint){
+		@include Responsive(1250px){
 			clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
 			height: 35rem;
 		}
@@ -644,7 +677,7 @@ $mobileBreakpoint: 750px;
 		align-items: center;
 		text-align: center;
 
-		@include Responsive($tabletBreakpoint){
+		@include Responsive(1250px){
 			width: 100%;
 		}
 
@@ -692,22 +725,28 @@ $mobileBreakpoint: 750px;
 
 	&__right{
 		width: 18%;
-		@include Responsive($tabletBreakpoint){
+		@include Responsive(1250px){
 			display: none;
 		}
 
 		img{
 			width: 100%;
+			transform: translateY(2.4rem);
+
+			@include Responsive($containerWidth){
+				transform: translateY(7.4rem);
+			}
 		}
 	}
 	&__bar{
 		width: 100%;
-		height: 150px;
+		height: 85px;
 		display: flex;
 		background-color: #fff;
 		margin-top:-6px;
 		z-index: 2;
 		position: relative;
+		align-items: center;
 		@include Responsive($containerWidth){
 			margin-top: 0;
 		}
@@ -715,6 +754,21 @@ $mobileBreakpoint: 750px;
 			margin-top: 0;
 			height: 50px;
 		}
+
+		&--container{
+			@include Container;
+
+			a, a:active, a:visited, a:link{
+				color: $skid-color-1;
+				@include Font;
+				font-size: 18px;
+
+				&:hover{
+					color: $skid-color-3;
+				}
+			}
+		}
+		
 	}
 }
 
@@ -878,3 +932,17 @@ $mobileBreakpoint: 750px;
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+.page{
+	margin: 0 !important;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+    display: none;
+}
+
+.wpcf7-not-valid-tip {
+
+	color: #fff;
+	@include Font;
+}

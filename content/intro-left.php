@@ -2,7 +2,7 @@
 <h3>The best solution for airports to operate more efficient, sustainable and safe.</h3>
 <p>Sustainability is becoming more important and weather conditions are becoming more extreme. Critical to landing and
     takeoff safety is the traction of the landing gear tires on the runway surface. The high-friction properties of
-    Antiskid significantly reduce runway occupation time, while increasing safety and capacity and, thereby,
+    Antiskid® significantly reduce runway occupation time, while increasing safety and capacity and, thereby,
     profitability.
 </p>
 
@@ -20,5 +20,5 @@
 
 <div class="content__bottom">
     <h4><strong>Did you know?</strong></h4>
-    <p>Antiskid extends the service life of the runway surfaces between five to eight years. It requires virtually no maintenance and protects the underlying asphalt, which in turn also lasts longer and requires less maintenance. Although the investment costs are higher, the life cycle costs are significantly lower.</p>
+    <p>Antiskid® extends the service life of the runway surfaces between five to eight years. It requires virtually no maintenance and protects the underlying asphalt, which in turn also lasts longer and requires less maintenance. Although the investment costs are higher, the life cycle costs are significantly lower.</p>
 </div>
