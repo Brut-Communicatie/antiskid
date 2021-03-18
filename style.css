@@ -361,6 +361,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .content__video {
 	margin-top: 6rem;
+	width: 100%;
+}
+
+.content__video video {
+	margin-top: 1rem;
+	width: 100%;
 }
 
 .content__bottom {

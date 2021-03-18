@@ -361,6 +361,11 @@ $mobileBreakpoint: 750px;
 
 	&__video {
 		margin-top: 6rem;
+		width: 100%;
+		video{
+			margin-top: 1rem;
+			width: 100%;
+		}
 	}
 
 	&__bottom {
