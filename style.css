@@ -405,6 +405,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-top: 2rem;
 	background-color: #F7F8F8;
 	padding: 1rem 0;
+	margin-bottom: 2rem;
 }
 
 .quote p {
@@ -912,7 +913,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	padding: 15px 20px;
 	text-decoration: none;
 	color: #fff;
-	width: fit-content;
+	width: auto;
 	background-color: #FF8A15;
 	font-family: 'PT Sans', sans-serif;
 	font-size: 20px;

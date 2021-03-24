@@ -394,6 +394,7 @@ $mobileBreakpoint: 750px;
 	margin-top: 2rem;
 	background-color: $skid-color-4;
 	padding: 1rem 0;
+	margin-bottom: 2rem;
 	p {
 		text-align: center;
 		width: 60%;
@@ -437,6 +438,9 @@ $mobileBreakpoint: 750px;
 	justify-content: space-around;
 	margin-top: auto;
 
+	// @include Responsive(600px){
+	// 	margin-top: 2rem;
+	// }
 	&__item {
 		display: flex;
 		flex-direction: column;
@@ -830,7 +834,7 @@ background: linear-gradient(0deg, rgba(100,169,216,1) 0%, rgba(48,112,179,1) 100
 		padding: 15px 20px;
 		text-decoration: none;
 		color: #fff;
-		width: fit-content;
+		width: auto;
 		background-color: $skid-color-2;
 		@include Font;
 		font-size: 20px;
