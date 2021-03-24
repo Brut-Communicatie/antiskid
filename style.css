@@ -335,7 +335,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: stretch;
 	margin-top: 2rem;
 }
 
@@ -371,8 +371,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+.content__left h3 {
+	margin-top: 0;
+}
+
 .content__right {
 	width: 35%;
+	display: flex;
+	flex-direction: column;
 }
 
 @media screen and (max-width: 750px) {
@@ -397,6 +403,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .quote {
 	margin-top: 2rem;
+	background-color: #F7F8F8;
+	padding: 1rem 0;
 }
 
 .quote p {
@@ -404,6 +412,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	width: 60%;
 	margin: 0 auto;
 	margin-bottom: 1.5rem;
+	line-height: 30px;
 	font-family: 'PT Sans', sans-serif;
 }
 
@@ -435,11 +444,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .numbers {
 	width: 100%;
-	border-top: 3px solid #0870B8;
-	border-bottom: 3px solid #0870B8;
+	background-color: #8ad0ed;
 	display: flex;
 	justify-content: space-around;
-	margin-top: 4rem;
+	margin-top: auto;
 }
 
 .numbers__item {
@@ -451,7 +459,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .numbers__item p {
-	color: #0870B8;
+	color: #fff;
 	font-size: 18px;
 	margin: 0;
 	font-weight: 600;
@@ -470,8 +478,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .block {
 	width: 100%;
 	height: auto;
-	border: 4px solid #4BAADD;
 	padding: 2rem;
+	background: #64a9d8;
+	background: linear-gradient(0deg, #64a9d8 0%, #3070b3 100%);
+}
+
+.block h4 {
+	color: #fff;
 }
 
 .block ul {
@@ -485,10 +498,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	text-transform: uppercase;
 	font-size: 20px;
 	font-weight: 600;
-	color: #0870B8;
+	color: #fff;
 	display: flex;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-start;
+}
+
+.block ul li img {
+	margin-top: 4px;
 }
 
 .block ul li p {
@@ -496,7 +513,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	text-transform: uppercase;
 	font-size: 20px;
 	font-weight: 600;
-	color: #0870B8;
+	color: #fff;
 	margin: 0;
 	margin-left: 10px;
 }
@@ -506,7 +523,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .block ul li:not(:first-child) {
-	margin-top: 2rem;
+	margin-top: 1rem;
 }
 
 .usp {
