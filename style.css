@@ -198,7 +198,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @media screen and (max-width: 750px) {
 	.banner__background {
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-		height: 575px;
+		height: 250px;
 	}
 }
 
@@ -213,6 +213,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @media screen and (max-width: 1440px) {
 	.banner__container {
 		width: calc(100% - 3rem);
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.banner__container {
+		flex-direction: column;
 	}
 }
 
@@ -236,7 +242,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media screen and (max-width: 750px) {
 	.banner__image {
-		display: none;
+		order: 1;
 	}
 }
 
@@ -249,6 +255,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	.banner__heading {
 		width: 100%;
 		margin-top: 3rem;
+		order: 2;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.banner__heading .button__animated::after {
+		background-color: black !important;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.banner__heading {
+		margin-top: 6rem;
 	}
 }
 
@@ -262,6 +281,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 750px) {
+	.banner__heading h1 {
+		color: black;
+	}
+}
+
 .banner__heading p {
 	color: #fff;
 	font-family: 'PT Sans', sans-serif;
@@ -272,8 +297,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-left: 20px;
 }
 
+@media screen and (max-width: 750px) {
+	.banner__heading p {
+		color: black;
+	}
+}
+
 .banner__heading p img {
 	margin-left: 5px;
+}
+
+@media screen and (max-width: 750px) {
+	.banner__heading p img {
+		filter: invert(0%);
+	}
 }
 
 .banner__heading a,
@@ -283,11 +320,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	text-decoration: none;
 }
 
+@media screen and (max-width: 750px) {
+	.banner__heading a,
+	.banner__heading a:visited,
+	.banner__heading a:active {
+		color: black;
+	}
+}
+
 .banner__heading a:hover,
 .banner__heading a:visited:hover,
 .banner__heading a:active:hover {
 	color: #fff;
 	text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+	.banner__heading a:hover,
+	.banner__heading a:visited:hover,
+	.banner__heading a:active:hover {
+		color: black;
+	}
 }
 
 .content h2 {
@@ -413,7 +466,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	width: 60%;
 	margin: 0 auto;
 	margin-bottom: 1.5rem;
-	line-height: 30px;
+	line-height: 35px;
 	font-family: 'PT Sans', sans-serif;
 }
 
@@ -436,7 +489,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	text-align: center;
 	color: #6B7E88;
 	width: 70%;
+	line-height: 35px;
 	margin: 0 auto;
+	margin-top: 1rem;
 }
 
 .quote h6 i {
@@ -785,7 +840,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-top: 10px;
 }
 
-.bottom__left a, .bottom__left a:visited {
+.bottom__left a,
+.bottom__left a:visited {
 	font-family: 'PT Sans', sans-serif;
 	color: #fff;
 	text-decoration: none;
@@ -794,7 +850,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-left: 5px;
 }
 
-.bottom__left a:hover, .bottom__left a:visited:hover {
+.bottom__left a:hover,
+.bottom__left a:visited:hover {
 	color: #fff;
 	text-decoration: none;
 }
@@ -855,13 +912,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-.bottom__bar--container a, .bottom__bar--container a:active, .bottom__bar--container a:visited, .bottom__bar--container a:link {
+.bottom__bar--container a,
+.bottom__bar--container a:active,
+.bottom__bar--container a:visited,
+.bottom__bar--container a:link {
 	color: #0870B8;
 	font-family: 'PT Sans', sans-serif;
 	font-size: 18px;
 }
 
-.bottom__bar--container a:hover, .bottom__bar--container a:active:hover, .bottom__bar--container a:visited:hover, .bottom__bar--container a:link:hover {
+.bottom__bar--container a:hover,
+.bottom__bar--container a:active:hover,
+.bottom__bar--container a:visited:hover,
+.bottom__bar--container a:link:hover {
 	color: #4BAADD;
 }
 
@@ -933,7 +996,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .button__orange {
 	padding: 15px 20px;
 	text-decoration: none;
-	color: #fff;
+	color: #fff !important;
 	background-color: #FF8A15;
 	font-family: 'PT Sans', sans-serif;
 	font-size: 20px;
@@ -941,7 +1004,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .button__orange:hover {
-	color: #fff;
+	color: #fff !important;
 	background-color: #4BAADD;
 	text-decoration: none !important;
 }
@@ -1870,7 +1933,8 @@ textarea {
 	margin: 0 !important;
 }
 
-.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
 	display: none;
 }
 

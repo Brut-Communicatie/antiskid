@@ -165,14 +165,16 @@ $mobileBreakpoint: 750px;
 				font-size: 18px;
 				display: flex;
 				align-items: center;
-				img{
+
+				img {
 					filter: invert(100%);
 				}
+
 				&:hover {
 					color: #fff;
 					text-decoration: none;
 
-					img{
+					img {
 						opacity: 0.8;
 					}
 				}
@@ -181,7 +183,7 @@ $mobileBreakpoint: 750px;
 			@include Responsive($mobileBreakpoint) {
 				width: 100%;
 
-				.button__animated{
+				.button__animated {
 					display: none;
 				}
 			}
@@ -214,7 +216,7 @@ $mobileBreakpoint: 750px;
 
 		@include Responsive($mobileBreakpoint) {
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-			height: 575px;
+			height: 250px;
 		}
 	}
 
@@ -223,6 +225,10 @@ $mobileBreakpoint: 750px;
 		display: flex;
 		align-items: stretch;
 		height: 450px;
+
+		@include Responsive($mobileBreakpoint) {
+			flex-direction: column;
+		}
 	}
 
 	&__image {
@@ -242,7 +248,7 @@ $mobileBreakpoint: 750px;
 		}
 
 		@include Responsive($mobileBreakpoint) {
-			display: none;
+			order: 1;
 		}
 
 	}
@@ -254,6 +260,17 @@ $mobileBreakpoint: 750px;
 		@include Responsive($mobileBreakpoint) {
 			width: 100%;
 			margin-top: 3rem;
+			order: 2;
+		}
+
+		.button__animated::after {
+			@include Responsive($mobileBreakpoint) {
+				background-color: black !important;
+			}
+		}
+
+		@include Responsive(500px) {
+			margin-top: 6rem;
 		}
 
 		h1 {
@@ -264,6 +281,10 @@ $mobileBreakpoint: 750px;
 			font-size: 64px;
 			line-height: 64px;
 			margin-bottom: 2rem;
+
+			@include Responsive($mobileBreakpoint) {
+				color: black;
+			}
 		}
 
 		p {
@@ -274,8 +295,17 @@ $mobileBreakpoint: 750px;
 			font-size: 18px;
 			display: flex;
 			margin-left: 20px;
-			img{
+
+			@include Responsive($mobileBreakpoint) {
+				color: black;
+			}
+
+			img {
 				margin-left: 5px;
+
+				@include Responsive($mobileBreakpoint) {
+					filter: invert(0%);
+				}
 			}
 		}
 
@@ -285,9 +315,17 @@ $mobileBreakpoint: 750px;
 			color: #fff;
 			text-decoration: none;
 
+			@include Responsive($mobileBreakpoint) {
+				color: black;
+			}
+
 			&:hover {
 				color: #fff;
 				text-decoration: none;
+
+				@include Responsive($mobileBreakpoint) {
+					color: black;
+				}
 			}
 		}
 	}
@@ -342,7 +380,7 @@ $mobileBreakpoint: 750px;
 		align-items: stretch;
 		margin-top: 2rem;
 
-		@include Responsive($tabletBreakpoint){
+		@include Responsive($tabletBreakpoint) {
 			margin-top: 6rem;
 		}
 
@@ -362,7 +400,7 @@ $mobileBreakpoint: 750px;
 			margin-bottom: 2rem;
 		}
 
-		h3{
+		h3 {
 			margin-top: 0;
 		}
 	}
@@ -371,6 +409,7 @@ $mobileBreakpoint: 750px;
 		width: 35%;
 		display: flex;
 		flex-direction: column;
+
 		@include Responsive($mobileBreakpoint) {
 			width: 100%;
 		}
@@ -379,7 +418,8 @@ $mobileBreakpoint: 750px;
 	&__video {
 		margin-top: 1rem;
 		width: 100%;
-		video{
+
+		video {
 			margin-top: 1rem;
 			width: 100%;
 		}
@@ -395,12 +435,13 @@ $mobileBreakpoint: 750px;
 	background-color: $skid-color-4;
 	padding: 2rem 0;
 	margin-bottom: 2rem;
+
 	p {
 		text-align: center;
 		width: 60%;
 		margin: 0 auto;
 		margin-bottom: 1.5rem;
-		line-height: 30px;
+		line-height: 35px;
 		@include Font;
 
 		i {
@@ -423,7 +464,9 @@ $mobileBreakpoint: 750px;
 		text-align: center;
 		color: $skid-color-6;
 		width: 70%;
+		line-height: 35px;
 		margin: 0 auto;
+		margin-top: 1rem;
 
 		i {
 			font-style: italic;
@@ -471,11 +514,13 @@ $mobileBreakpoint: 750px;
 	width: 100%;
 	height: auto;
 	padding: 2rem;
-	background: rgb(100,169,216);
-	background: linear-gradient(0deg, rgba(100,169,216,1) 0%, rgba(48,112,179,1) 100%);
+	background: rgb(100, 169, 216);
+	background: linear-gradient(0deg, rgba(100, 169, 216, 1) 0%, rgba(48, 112, 179, 1) 100%);
+
 	h4 {
 		color: #fff;
 	}
+
 	ul {
 		padding: 0;
 		margin: 0;
@@ -491,10 +536,11 @@ $mobileBreakpoint: 750px;
 			justify-content: flex-start;
 			align-items: flex-start;
 
-			img{
+			img {
 				margin-top: 4px;
 			}
-			p{
+
+			p {
 				@include Font;
 				text-transform: uppercase;
 				font-size: 20px;
@@ -503,6 +549,7 @@ $mobileBreakpoint: 750px;
 				margin: 0;
 				margin-left: 10px;
 			}
+
 			&:first-child {
 				margin-top: 2rem;
 			}
@@ -616,56 +663,59 @@ $mobileBreakpoint: 750px;
 	height: 30rem;
 	position: relative;
 	background-position: bottom left;
-    background-repeat: no-repeat;
-    background-size: contain;
-	
-	@include Responsive(1250px){
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	@include Responsive(1250px) {
 		background-image: unset !important;
-		height:28rem;
+		height: 28rem;
 	}
 
-	@include Responsive($mobileBreakpoint){
-		height:27rem;
+	@include Responsive($mobileBreakpoint) {
+		height: 27rem;
 	}
 
-	&__section{
+	&__section {
 		overflow-y: hidden;
 		height: 39rem;
 		padding: 10rem 0 0;
-		margin-top: -10rem; 
+		margin-top: -10rem;
 
-		@include Responsive($containerWidth){
+		@include Responsive($containerWidth) {
 			height: 37rem;
 		}
-		@include Responsive($tabletBreakpoint){
+
+		@include Responsive($tabletBreakpoint) {
 			height: 37rem;
 		}
-		@include Responsive($mobileBreakpoint){
+
+		@include Responsive($mobileBreakpoint) {
 			height: 34rem;
 		}
 
-		@include Responsive(565px){
+		@include Responsive(565px) {
 			height: 37rem;
 		}
 	}
+
 	&__background {
 		width: 100%;
 		clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
 		transform: scaleY(-1) translateY(7.9rem);
-		background: rgb(100,169,216);
-background: linear-gradient(0deg, rgba(100,169,216,1) 0%, rgba(48,112,179,1) 100%);
+		background: rgb(100, 169, 216);
+		background: linear-gradient(0deg, rgba(100, 169, 216, 1) 0%, rgba(48, 112, 179, 1) 100%);
 		height: 40rem;
 		position: absolute;
 		left: 0;
 		top: 0;
 		z-index: 0;
 
-		@include Responsive($containerWidth){
+		@include Responsive($containerWidth) {
 			height: 41rem;
 		}
 
 
-		@include Responsive(1250px){
+		@include Responsive(1250px) {
 			clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
 			height: 35rem;
 		}
@@ -680,13 +730,13 @@ background: linear-gradient(0deg, rgba(100,169,216,1) 0%, rgba(48,112,179,1) 100
 		justify-content: flex-end;
 		align-items: center;
 
-		@include Responsive($tabletBreakpoint){
+		@include Responsive($tabletBreakpoint) {
 			padding: 0 0 2rem;
 			align-items: flex-end;
 		}
 	}
 
-	&__left{
+	&__left {
 		width: 50%;
 		margin-right: 5%;
 		display: flex;
@@ -695,11 +745,11 @@ background: linear-gradient(0deg, rgba(100,169,216,1) 0%, rgba(48,112,179,1) 100
 		align-items: center;
 		text-align: center;
 
-		@include Responsive(1250px){
+		@include Responsive(1250px) {
 			width: 100%;
 		}
 
-		h4{
+		h4 {
 			@include Font;
 			color: #fff;
 			font-size: 24px;
@@ -707,14 +757,15 @@ background: linear-gradient(0deg, rgba(100,169,216,1) 0%, rgba(48,112,179,1) 100
 			margin: 0;
 		}
 
-		h3{
+		h3 {
 			@include Font;
 			color: #fff;
 			font-size: 40px;
 			text-transform: uppercase;
 			margin: 0;
 		}
-		p{
+
+		p {
 			@include Font;
 			color: #fff;
 			align-self: flex-end;
@@ -726,111 +777,127 @@ background: linear-gradient(0deg, rgba(100,169,216,1) 0%, rgba(48,112,179,1) 100
 			align-items: center;
 			margin-top: 10px;
 		}
-		a, a:visited{
+
+		a,
+		a:visited {
 			@include Font;
 			color: #fff;
 			text-decoration: none;
 			align-self: flex-end;
 			text-align: right;
-			margin-left: 5px;	
-	
-			&:hover{
+			margin-left: 5px;
+
+			&:hover {
 				color: #fff;
 				text-decoration: none;
 			}
 		}
 	}
 
-	&__right{
+	&__right {
 		width: 18%;
-		@include Responsive(1250px){
+
+		@include Responsive(1250px) {
 			display: none;
 		}
 
-		img{
+		img {
 			width: 100%;
 			transform: translateY(2.4rem);
 
-			@include Responsive($containerWidth){
+			@include Responsive($containerWidth) {
 				transform: translateY(7.4rem);
 			}
 		}
 	}
-	&__bar{
+
+	&__bar {
 		width: 100%;
 		height: 85px;
 		display: flex;
 		background-color: #fff;
-		margin-top:-6px;
+		margin-top: -6px;
 		z-index: 2;
 		position: relative;
 		align-items: center;
-		@include Responsive($containerWidth){
+
+		@include Responsive($containerWidth) {
 			margin-top: 0;
 		}
-		@include Responsive($tabletBreakpoint){
+
+		@include Responsive($tabletBreakpoint) {
 			margin-top: 0;
 			height: 50px;
 		}
 
-		&--container{
+		&--container {
 			@include Container;
 
-			a, a:active, a:visited, a:link{
+			a,
+			a:active,
+			a:visited,
+			a:link {
 				color: $skid-color-1;
 				@include Font;
 				font-size: 18px;
 
-				&:hover{
+				&:hover {
 					color: $skid-color-3;
 				}
 			}
 		}
-		
+
 	}
 }
 
 
-.contact{
+.contact {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+
 	.wpcf7 .ajax-loader {
 		display: none;
 	}
-	p{
+
+	p {
 		display: flex;
 
-		input{
+		input {
 			width: 100%;
 		}
 	}
-	&__row{
+
+	&__row {
 		display: flex;
 		justify-content: space-between;
 	}
-	&__item{
+
+	&__item {
 		margin-bottom: 10px;
 
 		@include Font;
 		width: 100%;
-		span{
+
+		span {
 			width: 100%;
-			input{
+
+			input {
 				width: 100%;
 				border-radius: 0;
 				padding: 0.5rem;
 				@include Font;
 			}
 		}
-		&--half{
+
+		&--half {
 			@extend .contact__item;
 			width: 49%;
 		}
 	}
 
 
-	input[type="submit"]{
+	input[type="submit"] {
 		padding: 15px 20px;
 		text-decoration: none;
 		color: #fff;
@@ -843,6 +910,7 @@ background: linear-gradient(0deg, rgba(100,169,216,1) 0%, rgba(48,112,179,1) 100
 		border: 0;
 		align-self: flex-end;
 		margin-left: auto;
+
 		&:hover {
 			color: #fff;
 			background-color: $skid-color-3;
@@ -850,18 +918,19 @@ background: linear-gradient(0deg, rgba(100,169,216,1) 0%, rgba(48,112,179,1) 100
 		}
 	}
 }
+
 .button {
 	&__orange {
 		padding: 15px 20px;
 		text-decoration: none;
-		color: #fff;
+		color: #fff !important;
 		background-color: $skid-color-2;
 		@include Font;
 		font-size: 20px;
 		transition: all .25s ease;
 
 		&:hover {
-			color: #fff;
+			color: #fff !important;
 			background-color: $skid-color-3;
 			text-decoration: none !important;
 		}
@@ -877,7 +946,7 @@ background: linear-gradient(0deg, rgba(100,169,216,1) 0%, rgba(48,112,179,1) 100
 	align-items: center;
 	width: fit-content;
 
-	img{
+	img {
 		filter: invert(100%);
 		margin-right: 5px;
 	}
@@ -951,12 +1020,13 @@ background: linear-gradient(0deg, rgba(100,169,216,1) 0%, rgba(48,112,179,1) 100
 --------------------------------------------- */
 @import "utilities/alignments";
 
-.page{
+.page {
 	margin: 0 !important;
 }
 
-.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
-    display: none;
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+	display: none;
 }
 
 .wpcf7-not-valid-tip {
