@@ -87,7 +87,6 @@ $mobileBreakpoint: 750px;
 	font-family: 'PT Sans', sans-serif;
 }
 
-
 .header {
 	width: 100%;
 	display: flex;
@@ -293,6 +292,8 @@ $mobileBreakpoint: 750px;
 
 			@include Responsive($mobileBreakpoint) {
 				color: black;
+				font-size: 47px;
+				line-height: 47px;
 			}
 		}
 
