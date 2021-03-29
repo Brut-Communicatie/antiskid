@@ -244,19 +244,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @media screen and (max-width: 1440px) {
 	.banner__image img {
 		object-fit: fill;
-		height: fit-content;
+		height: 100%;
 	}
 }
 
 @media screen and (max-width: 750px) {
 	.banner__image {
 		order: 1;
+		margin-left: auto;
+		height: 100%;
 	}
 }
 
 @media screen and (max-width: 500px) {
 	.banner__image {
-		width: 50%;
+		width: 55%;
 	}
 }
 
@@ -475,6 +477,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-color: #F7F8F8;
 	padding: 2rem 0;
 	margin-bottom: 2rem;
+	display: grid;
+	place-items: center;
+	flex-grow: 1;
 }
 
 .quote p {
