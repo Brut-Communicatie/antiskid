@@ -170,7 +170,7 @@ $mobileBreakpoint: 750px;
 					filter: invert(100%);
 				}
 
-				@include Responsive($mobileBreakpoint){
+				@include Responsive($mobileBreakpoint) {
 					margin-left: 15px;
 				}
 
@@ -196,10 +196,12 @@ $mobileBreakpoint: 750px;
 }
 
 .banner {
-
-
 	padding: 0 0 12rem;
 	position: relative;
+
+	@include Responsive($mobileBreakpoint) {
+		padding: 0 0 7rem;
+	}
 
 	&__background {
 		height: 650px;
@@ -257,7 +259,7 @@ $mobileBreakpoint: 750px;
 			height: 100%;
 		}
 
-		@include Responsive(500px){
+		@include Responsive(500px) {
 			width: 55%;
 		}
 
