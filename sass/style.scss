@@ -170,6 +170,10 @@ $mobileBreakpoint: 750px;
 					filter: invert(100%);
 				}
 
+				@include Responsive($mobileBreakpoint){
+					margin-left: 15px;
+				}
+
 				&:hover {
 					color: #fff;
 					text-decoration: none;
@@ -249,6 +253,10 @@ $mobileBreakpoint: 750px;
 
 		@include Responsive($mobileBreakpoint) {
 			order: 1;
+		}
+
+		@include Responsive(500px){
+			width: 50%;
 		}
 
 	}

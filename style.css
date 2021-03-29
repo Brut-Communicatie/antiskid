@@ -149,6 +149,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	filter: invert(100%);
 }
 
+@media screen and (max-width: 750px) {
+	.header__main--nav a,
+	.header__main--nav a:visited,
+	.header__main--nav a:active {
+		margin-left: 15px;
+	}
+}
+
 .header__main--nav a:hover,
 .header__main--nav a:visited:hover,
 .header__main--nav a:active:hover {
@@ -243,6 +251,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @media screen and (max-width: 750px) {
 	.banner__image {
 		order: 1;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.banner__image {
+		width: 50%;
 	}
 }
 
