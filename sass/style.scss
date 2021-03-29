@@ -64,6 +64,7 @@ $skid-color-5: #808080;
 $skid-color-6: #6B7E88;
 $skid-color-7: #8ad0ed;
 $containerWidth: 1440px;
+$containerBreakpoint: 1445px;
 $tabletBreakpoint: 1000px;
 $mobileBreakpoint: 750px;
 
@@ -77,7 +78,7 @@ $mobileBreakpoint: 750px;
 	width: $containerWidth;
 	margin: 0 auto;
 
-	@media screen and (max-width: $containerWidth) {
+	@media screen and (max-width: $containerBreakpoint) {
 		width: calc(100% - 3rem);
 	}
 }
