@@ -8,8 +8,8 @@ $callto = str_replace(' ', '', $tel);
 
     <div class="bottom__container">
         <div class="bottom__left">
-        <h4>Need some advice?</h4>
-        <h3>GET A GRIP ON our experts!</h3>
+        <h4>Need advice?</h4>
+        <h3>Get in touch with our experts!</h3>
         <div class="contact">
             <?php echo do_shortcode('[contact-form-7 id="7" title="Contactform"]');?>
         </div>
