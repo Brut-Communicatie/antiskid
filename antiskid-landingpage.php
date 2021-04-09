@@ -15,7 +15,7 @@ get_header();?>
             <p>or call <a href="tel:<?php echo $callto;?>" class="button__animated"><img src="<?php echo get_template_directory_uri();?>/images/phone.svg" width="20px" alt="phone" /><?php echo $tel;?></a></p>
         </div>
         <div class="banner__image">
-        <img src="<?php echo get_template_directory_uri();?>/images/wiel.png" width="500px" alt="Wiel" />
+            <img src="<?php echo get_template_directory_uri();?>/images/wiel.png" width="500px" alt="Wiel" />
         </div>
     </div>
 </div>

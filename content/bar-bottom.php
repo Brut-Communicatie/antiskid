@@ -24,5 +24,6 @@ $callto = str_replace(' ', '', $tel);
 <div class="bottom__bar">
 <div class="bottom__bar--container">
 <a href="https://www.possehl.de/en/data-protection/" target="_blank" rel="noopener noreferrer">Privacystatement</a>
+<a href="https://www.possehl.de/" target="_blank" rel="noopener noreferrer">Go to possehl.de</a>
 </div>
 </div>
