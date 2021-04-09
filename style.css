@@ -946,6 +946,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	color: #0870B8;
 	font-family: 'PT Sans', sans-serif;
 	font-size: 18px;
+	margin-right: 10px;
 }
 
 .bottom__bar--container a:hover,

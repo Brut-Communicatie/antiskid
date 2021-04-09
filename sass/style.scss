@@ -857,7 +857,7 @@ $mobileBreakpoint: 750px;
 				color: $skid-color-1;
 				@include Font;
 				font-size: 18px;
-
+				margin-right: 10px;
 				&:hover {
 					color: $skid-color-3;
 				}
