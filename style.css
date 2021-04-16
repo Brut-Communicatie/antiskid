@@ -276,7 +276,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @media screen and (max-width: 750px) {
 	.banner__heading {
 		width: 100%;
-		margin-top: 3rem;
+		margin-top: 6rem;
 		order: 2;
 	}
 }
@@ -289,7 +289,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media screen and (max-width: 500px) {
 	.banner__heading {
-		margin-top: 6rem;
+		margin-top: 7rem;
 	}
 }
 
@@ -649,6 +649,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	text-align: center;
 }
 
+@media screen and (max-width: 750px) {
+	.usp__container h2 {
+		font-size: 30px;
+		line-height: 30px;
+	}
+}
+
 .usp__overview {
 	display: flex;
 	justify-content: space-between;
@@ -837,6 +844,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+@media screen and (max-width: 750px) {
+	.bottom__container {
+		padding: 0;
+	}
+}
+
 .bottom__left {
 	width: 50%;
 	margin-right: 5%;
@@ -888,6 +901,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	justify-content: center;
 	align-items: center;
 	margin-top: 10px;
+}
+
+@media screen and (max-width: 750px) {
+	.bottom__left p {
+		align-self: center;
+	}
 }
 
 .bottom__left a,
