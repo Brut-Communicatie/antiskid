@@ -791,6 +791,12 @@ $mobileBreakpoint: 750px;
 			font-size: 40px;
 			text-transform: uppercase;
 			margin: 0;
+
+			@include Responsive($mobileBreakpoint){
+				font-size: 30px;
+				line-height: 30px;
+				margin-bottom: 1rem;
+			}
 		}
 
 		p {
@@ -899,6 +905,10 @@ $mobileBreakpoint: 750px;
 	&__row {
 		display: flex;
 		justify-content: space-between;
+
+		@include Responsive($mobileBreakpoint){
+			flex-wrap: wrap;
+		}
 	}
 
 	&__item {
@@ -921,6 +931,10 @@ $mobileBreakpoint: 750px;
 		&--half {
 			@extend .contact__item;
 			width: 49%;
+
+			@include Responsive($mobileBreakpoint){
+				width: 100%;
+			}
 		}
 	}
 
@@ -938,6 +952,10 @@ $mobileBreakpoint: 750px;
 		border: 0;
 		align-self: flex-end;
 		margin-left: auto;
+
+		@include Responsive($mobileBreakpoint){
+			width: 100%;
+		}
 
 		&:hover {
 			color: #fff;

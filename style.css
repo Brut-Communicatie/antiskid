@@ -869,6 +869,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin: 0;
 }
 
+@media screen and (max-width: 750px) {
+	.bottom__left h3 {
+		font-size: 30px;
+		line-height: 30px;
+		margin-bottom: 1rem;
+	}
+}
+
 .bottom__left p {
 	font-family: 'PT Sans', sans-serif;
 	color: #fff;
@@ -994,6 +1002,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	justify-content: space-between;
 }
 
+@media screen and (max-width: 750px) {
+	.contact__row {
+		flex-wrap: wrap;
+	}
+}
+
 .contact__item, .contact__item--half {
 	margin-bottom: 10px;
 	font-family: 'PT Sans', sans-serif;
@@ -1015,6 +1029,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	width: 49%;
 }
 
+@media screen and (max-width: 750px) {
+	.contact__item--half {
+		width: 100%;
+	}
+}
+
 .contact input[type="submit"] {
 	padding: 15px 20px;
 	text-decoration: none;
@@ -1028,6 +1048,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	border: 0;
 	align-self: flex-end;
 	margin-left: auto;
+}
+
+@media screen and (max-width: 750px) {
+	.contact input[type="submit"] {
+		width: 100%;
+	}
 }
 
 .contact input[type="submit"]:hover {
