@@ -616,6 +616,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	padding-bottom: 9rem;
 }
 
+@media screen and (max-width: 750px) {
+	.usp {
+		padding-bottom: 0;
+	}
+}
+
 .usp__container {
 	padding: 3rem 0 4rem;
 	width: 1440px;
@@ -738,7 +744,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media screen and (max-width: 750px) {
 	.bottom {
-		height: 27rem;
+		height: 100%;
+		padding: 2rem 0;
 	}
 }
 
@@ -796,6 +803,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	.bottom__background {
 		clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
 		height: 35rem;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.bottom__background {
+		clip-path: unset;
+		height: 100%;
+		transform: unset;
 	}
 }
 
