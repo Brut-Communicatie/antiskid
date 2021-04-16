@@ -289,7 +289,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media screen and (max-width: 500px) {
 	.banner__heading {
-		margin-top: 7rem;
+		margin-top: 5rem;
 	}
 }
 
