@@ -142,7 +142,7 @@ add_action( 'widgets_init', 'antiskid_widgets_init' );
 function antiskid_scripts() {
 	wp_enqueue_style( 'antiskid-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'antiskid-style', 'rtl', 'replace' );
-
+	wp_enqueue_script( 'contactform-analytics', get_template_directory_uri() . '/js/contactform.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'antiskid-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

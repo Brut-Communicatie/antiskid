@@ -2031,4 +2031,10 @@ textarea {
 	font-family: 'PT Sans', sans-serif;
 }
 
+.wpcf7 form.sent .wpcf7-response-output {
+	border-color: #46b450;
+	background-color: #46b450;
+	color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */
