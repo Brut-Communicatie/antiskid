@@ -271,7 +271,7 @@ $mobileBreakpoint: 750px;
 
 		@include Responsive($mobileBreakpoint) {
 			width: 100%;
-			margin-top: 6rem;
+			margin-top: 4rem;
 			order: 2;
 		}
 

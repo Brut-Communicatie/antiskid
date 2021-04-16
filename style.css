@@ -276,7 +276,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @media screen and (max-width: 750px) {
 	.banner__heading {
 		width: 100%;
-		margin-top: 6rem;
+		margin-top: 4rem;
 		order: 2;
 	}
 }
